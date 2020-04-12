@@ -3,9 +3,9 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 import Route from './Route';
 
-import LogIn from '../pages/LogIn';
+import LogIn from '~/pages/LogIn';
 
-import Order from '../pages/Order';
+import Order from '~/pages/Order';
 
 export default function Routes() {
   return (
@@ -14,5 +14,5 @@ export default function Routes() {
 
       <Route path="/orders" component={Order} isPrivate />
     </Switch>
-  )
+  );
 }
