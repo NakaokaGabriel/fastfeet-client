@@ -6,7 +6,7 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
-  const signed = true;
+  const signed = false;
 
   if (!signed && isPrivate) {
     return <Redirect to="/" />;
@@ -16,7 +16,5 @@ export default function RouteWrapper({
     return <Redirect to="/orders" />;
   }
 
-  return (
-    <Route {...rest} component={Component} />
-  )
+  return <Route {...rest} component={Component} />;
 }
