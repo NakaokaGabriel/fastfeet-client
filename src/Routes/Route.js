@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
+import AuthAuthenticated from '~/pages/_defaultLayout/AuthAuthenticated';
+import DefaultLayout from '~/pages/_defaultLayout/DefaultLayout';
+
 export default function RouteWrapper({
   component: Component,
   isPrivate,
@@ -17,7 +20,18 @@ export default function RouteWrapper({
     return <Redirect to="/orders" />;
   }
 
-  return <Route {...rest} component={Component} />;
+  const Layout = signed === true ? DefaultLayout : AuthAuthenticated;
+
+  return (
+    <Route
+      {...rest}
+      render={(props) => (
+        <Layout>
+          <Component {...props} />
+        </Layout>
+      )}
+    />
+  );
 }
 
 RouteWrapper.propTypes = {
