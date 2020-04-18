@@ -13,6 +13,8 @@ export default function Order() {
           title="Gerenciando encomendas"
           hasSearch
           searchTitle="Buscar por encomendas"
+          hasButton
+          buttonQuantity="1"
         />
         <h1>Container</h1>
       </Container>
