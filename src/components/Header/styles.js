@@ -13,6 +13,29 @@ export const Utils = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  a {
+    background: #7d40e7;
+    height: 36px;
+    width: 142px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+`;
+
+export const Search = styled.div`
+  position: relative;
+
+  svg {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+  }
+
   input {
     border: 1px solid #dddddd;
     border-radius: 4px;
@@ -27,18 +50,5 @@ export const Utils = styled.div`
       font-size: 14px;
       color: #999999;
     }
-  }
-
-  a {
-    background: #7d40e7;
-    height: 36px;
-    width: 142px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
   }
 `;
