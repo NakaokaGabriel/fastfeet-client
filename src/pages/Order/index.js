@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-// import { Container } from './styles';
-
 import Header from '~/components/Header';
 import { Container } from '~/components/Container/styles';
+import { Background } from '~/components/Background/styles';
+import { Table } from '~/components/Table/style';
 
 export default function Order() {
   const [, setSearchValue] = useState('');
@@ -17,7 +17,32 @@ export default function Order() {
           setSearchValue={setSearchValue}
           linkTo="/order/register"
         />
-        <h1>Container</h1>
+        <Background>
+          <Table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Destinatário</th>
+                <th>Entregador</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#01</td>
+                <td>Ludwig van Beethoven</td>
+                <td>John Doe</td>
+                <td>Rio do Sul</td>
+                <td>Santa Catarina</td>
+                <td>ENTREGUE</td>
+                <td>...</td>
+              </tr>
+            </tbody>
+          </Table>
+        </Background>
       </Container>
     </>
   );
