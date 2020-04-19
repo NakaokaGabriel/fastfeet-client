@@ -24,6 +24,10 @@ export const Utils = styled.div`
     color: #fff;
     font-size: 14px;
     font-weight: bold;
+
+    svg {
+      margin-right: 5px;
+    }
   }
 `;
 
