@@ -6,7 +6,7 @@ import Header from '~/components/Header';
 import { Container } from '~/components/Container/styles';
 
 export default function Order() {
-  const [searchValue, setSearchValue] = useState('');
+  const [, setSearchValue] = useState('');
 
   return (
     <>
@@ -15,7 +15,7 @@ export default function Order() {
           title="Gerenciando encomendas"
           searchTitle="Buscar por encomendas"
           setSearchValue={setSearchValue}
-          linkTo="/cu"
+          linkTo="/order/register"
         />
         <h1>Container</h1>
       </Container>
