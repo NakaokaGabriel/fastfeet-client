@@ -10,6 +10,10 @@ export const Table = styled.table`
     font-weight: bold;
     color: #444444;
     padding: 20px 25px;
+
+    &:last-child {
+      text-align: right;
+    }
   }
 
   tbody {
@@ -23,6 +27,10 @@ export const Table = styled.table`
         font-size: 16px;
         color: #666666;
         padding: 20px 25px;
+
+        &:last-child {
+          text-align: center;
+        }
       }
     }
   }
