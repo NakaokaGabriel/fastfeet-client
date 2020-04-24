@@ -1,43 +1,29 @@
 import styled from 'styled-components';
 
-export const Table = styled.div`
+export const Table = styled.table`
   width: 100%;
   text-align: left;
-`;
+  border-spacing: 0;
 
-export const Head = styled.div`
-  display: grid;
-  grid-template-columns: ${(props) => `repeat(${props.columns}, 1fr)`};
-  margin-bottom: 15px;
-  padding: 15px;
-
-  strong {
+  thead tr th {
     font-size: 16px;
-    color: #444;
-
-    &:last-child {
-      text-align: right;
-    }
-  }
-`;
-
-export const Body = styled.div`
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  background: #fff;
-  border-radius: 4px;
-  padding: 15px;
-
-  & + div {
-    margin-top: 20px;
+    font-weight: bold;
+    color: #444444;
+    padding: 20px 25px;
   }
 
-  p {
-    font-size: 16px;
-    color: #666666;
+  tbody {
+    background: #fff;
+    border-radius: 4px;
 
-    &:last-child {
-      text-align: right;
+    tr {
+      padding-bottom: 10px;
+
+      td {
+        font-size: 16px;
+        color: #666666;
+        padding: 20px 25px;
+      }
     }
   }
 `;

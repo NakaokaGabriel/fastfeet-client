@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Header from '~/components/Header';
 import { Container } from '~/components/Container/styles';
 import { Background } from '~/components/Background/styles';
-import { Table, Head, Body } from '~/components/Table/style';
+import { Table } from '~/components/Table/style';
 
 export default function Order() {
   const [, setSearchValue] = useState('');
@@ -18,33 +18,37 @@ export default function Order() {
       />
       <Background>
         <Table>
-          <Head columns="7">
-            <strong>ID</strong>
-            <strong>Destinatário</strong>
-            <strong>Entregador</strong>
-            <strong>Cidade</strong>
-            <strong>Estado</strong>
-            <strong>Status</strong>
-            <strong>Ações</strong>
-          </Head>
-          <Body>
-            <p>#01</p>
-            <p>Ludwig van Beethoven</p>
-            <p>John Doe</p>
-            <p>Rio do Sul</p>
-            <p>Santa Catarina</p>
-            <p>ENTREGUE</p>
-            <p>...</p>
-          </Body>
-          <Body>
-            <p>#01</p>
-            <p>Ludwig van Beethoven</p>
-            <p>John Doe</p>
-            <p>Rio do Sul</p>
-            <p>Santa Catarina</p>
-            <p>ENTREGUE</p>
-            <p>...</p>
-          </Body>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Destinatário</th>
+              <th>Entregador</th>
+              <th>Cidade</th>
+              <th>Estado</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#01</td>
+              <td>Ludwig van Beethoven</td>
+              <td>John Doe</td>
+              <td>Rio do Sul</td>
+              <td>Santa Catarina</td>
+              <td>ENTREGUE</td>
+              <td>...</td>
+            </tr>
+            <tr>
+              <td>#01</td>
+              <td>Ludwig van Beethoven</td>
+              <td>John Doe</td>
+              <td>Rio do Sul</td>
+              <td>Santa Catarina</td>
+              <td>ENTREGUE</td>
+              <td>...</td>
+            </tr>
+          </tbody>
         </Table>
       </Background>
     </Container>
