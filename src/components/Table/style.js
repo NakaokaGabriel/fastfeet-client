@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Table = styled.table`
   width: 100%;
   text-align: left;
-  border-spacing: 0;
+  border-collapse: separate;
+  border-spacing: 0 20px;
 
   thead tr th {
     font-size: 16px;
