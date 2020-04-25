@@ -26,6 +26,10 @@ export const Group = styled.div`
       color: #999999;
     }
 
+    li.active a {
+      color: #444444;
+    }
+
     li + li a {
       margin-left: 20px;
     }

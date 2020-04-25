@@ -3,8 +3,10 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 import Route from './Route';
 
+// Default routes
 import LogIn from '~/pages/LogIn';
 
+// Private routes
 import Order from '~/pages/Order';
 import OrderRegister from '~/pages/Order/Register';
 import OrderEdit from '~/pages/Order/Edit';
