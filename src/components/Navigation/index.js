@@ -10,37 +10,39 @@ export default function Navigation() {
 
   const [, pathname] = url.split('/');
 
+  const list = [
+    {
+      name: 'ENCOMENDAS',
+      link: '/orders',
+      active: ['orders', 'order'],
+    },
+    {
+      name: 'ENTREGADORES',
+      link: '/couriers',
+      active: ['couriers', 'courier'],
+    },
+    {
+      name: 'DESTINATÁRIOS',
+      link: '/recipients',
+      active: ['recipients', 'recipient'],
+    },
+    {
+      name: 'PROBLEMAS',
+      link: '/problems',
+      active: ['problems'],
+    },
+  ];
+
   return (
     <Nav>
       <Group>
         <img src={logo} alt="Fastfeet" />
         <ul>
-          <li
-            className={
-              pathname === 'orders' || pathname === 'order' ? 'active' : ''
-            }
-          >
-            <Link to="/orders">ENCOMENDAS</Link>
-          </li>
-          <li
-            className={
-              pathname === 'couriers' || pathname === 'courier' ? 'active' : ''
-            }
-          >
-            <Link to="/couriers">ENTREGADORES</Link>
-          </li>
-          <li
-            className={
-              pathname === 'recipients' || pathname === 'recipient'
-                ? 'active'
-                : ''
-            }
-          >
-            <Link to="/recipients">DESTINATÁRIOS</Link>
-          </li>
-          <li className={pathname === 'problems' ? 'active' : ''}>
-            <Link to="/problems">PROBLEMAS</Link>
-          </li>
+          {list.map((itens) => (
+            <li key={itens.name}>
+              <Link to={itens.link}>{itens.name}</Link>
+            </li>
+          ))}
         </ul>
       </Group>
       <Profile>
