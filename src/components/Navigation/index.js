@@ -39,7 +39,14 @@ export default function Navigation() {
         <img src={logo} alt="Fastfeet" />
         <ul>
           {list.map((itens) => (
-            <li key={itens.name}>
+            <li
+              key={itens.name}
+              className={
+                itens.active.find((active) => active === pathname)
+                  ? 'active'
+                  : ''
+              }
+            >
               <Link to={itens.link}>{itens.name}</Link>
             </li>
           ))}
