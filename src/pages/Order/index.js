@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Header from '~/components/Header';
+import Header from '~/components/Header/List';
 import { Container } from '~/components/Container/styles';
 import { Background } from '~/components/Background/styles';
 import { Table } from '~/components/Table/style';
