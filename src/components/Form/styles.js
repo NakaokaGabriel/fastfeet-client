@@ -2,21 +2,44 @@ import styled from 'styled-components';
 
 export const FormGroup = styled.div`
   width: 100%;
-  display: flex;
-
-  label {
-    display: block;
-  }
 `;
 
 export const InputGroup = styled.div`
-  width: 100%;
+  display: flex;
 
-  label {
-    display: block;
+  & + div {
+    margin-top: 15px;
   }
 
-  input {
+  div {
     width: 100%;
+
+    & + div {
+      margin-left: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #444;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      background: #fff;
+      height: 45px;
+      color: #dddddd;
+      font-size: 16px;
+      padding-left: 15px;
+
+      &::placeholder {
+        color: #dddddd;
+        font-size: 16px;
+      }
+    }
   }
 `;

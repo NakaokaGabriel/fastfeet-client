@@ -13,20 +13,26 @@ export default function Register() {
       <Background background>
         <FormGroup>
           <InputGroup>
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-            <label htmlFor="destinatario">Destinatário</label>
-            <input type="text" />
+            <div>
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+              <label htmlFor="destinatario">Destinatário</label>
+              <input type="text" placeholder="Ludwig van Beethoven" />
+            </div>
+
+            <div>
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+              <label htmlFor="entregador">Entregador</label>
+              <input type="text" placeholder="Ludwig van Beethoven" />
+            </div>
           </InputGroup>
 
           <InputGroup>
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-            <label htmlFor="entregador">Entregador</label>
-            <input type="text" />
+            <div>
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+              <label htmlFor="produto">Nome do produto</label>
+              <input type="text" placeholder="Ludwig van Beethoven" />
+            </div>
           </InputGroup>
-
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-          {/* <label htmlFor="produto">Nome do produto</label>
-          <input type="text" /> */}
         </FormGroup>
       </Background>
     </Container>
