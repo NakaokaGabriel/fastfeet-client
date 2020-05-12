@@ -30,7 +30,14 @@ export const Table = styled.table`
         padding: 20px 25px;
 
         &:last-child {
-          text-align: center;
+          text-align: right;
+          position: relative;
+        }
+
+        button {
+          margin-right: 10px;
+          background: none;
+          border: none;
         }
       }
     }
