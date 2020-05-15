@@ -15,6 +15,7 @@ import { Actions } from './styles';
 
 export default function Order() {
   const [, setSearchValue] = useState('');
+  const [actions, setActions] = useState(false);
 
   return (
     <Container>
@@ -46,8 +47,8 @@ export default function Order() {
               <td>Santa Catarina</td>
               <td>ENTREGUE</td>
               <td>
-                <Actions>
-                  <button type="button">
+                <Actions actions={actions}>
+                  <button type="button" onClick={() => setActions(!actions)}>
                     <MdMoreHoriz color="#C6C6C6" size={32} />
                   </button>
                   <div className="actions">
