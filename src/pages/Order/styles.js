@@ -36,6 +36,10 @@ export const Actions = styled.div`
       li {
         margin: 0 10px;
 
+        &:first-child {
+          margin-top: 10px;
+        }
+
         a {
           padding: 10px 0;
           display: block;
