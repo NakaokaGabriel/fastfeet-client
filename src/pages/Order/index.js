@@ -15,7 +15,6 @@ import { Actions } from './styles';
 
 export default function Order() {
   const [, setSearchValue] = useState('');
-  const [actions, setActions] = useState(false);
 
   return (
     <Container>
@@ -47,45 +46,8 @@ export default function Order() {
               <td>Santa Catarina</td>
               <td>ENTREGUE</td>
               <td>
-                <Actions actions={actions}>
-                  <button type="button" onClick={() => setActions(!actions)}>
-                    <MdMoreHoriz color="#C6C6C6" size={32} />
-                  </button>
-                  <div className="actions">
-                    <ul>
-                      <li>
-                        <Link to="/order/edit/1">
-                          <MdVisibility color="#8E5BE8" />
-                          Visualizar
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/order/edit/1">
-                          <MdCreate color="#4D85EE" />
-                          Editar
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/order/edit/1">
-                          <MdDeleteForever color="#DE3B3B" />
-                          Excluir
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </Actions>
-              </td>
-            </tr>
-            <tr>
-              <td>#01</td>
-              <td>Ludwig van Beethoven</td>
-              <td>John Doe</td>
-              <td>Rio do Sul</td>
-              <td>Santa Catarina</td>
-              <td>ENTREGUE</td>
-              <td>
-                <Actions actions={actions}>
-                  <button type="button" onClick={() => setActions(!actions)}>
+                <Actions>
+                  <button type="button">
                     <MdMoreHoriz color="#C6C6C6" size={32} />
                   </button>
                   <div className="actions">

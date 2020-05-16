@@ -4,7 +4,7 @@ export const Actions = styled.div`
   position: relative;
 
   .actions {
-    overflow: ${(props) => (props.actions ? 'unset' : 'hidden')};
+    overflow: hidden;
     position: absolute;
     left: -30px;
     width: 150px;
