@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Actions = styled.div`
+export const Action = styled.div`
   position: relative;
 
   .actions {
-    overflow: hidden;
+    overflow: ${(props) => (props.isAction ? 'unset' : 'hidden')};
     position: absolute;
     left: -30px;
     width: 150px;
